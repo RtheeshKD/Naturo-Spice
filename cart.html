@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom CSS styles here */
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Shopping Cart</h1>
+
+        <!-- Product List -->
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">$20.00</p>
+                        <button class="btn btn-primary add-to-cart" data-name="Product 1" data-price="20.00">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more product cards here -->
+            </div>
+
+            <!-- Shopping Cart -->
+            <div class="col-md-4">
+                <h2>Cart</h2>
+                <ul class="list-group shopping-cart">
+                    <!-- Cart items will be added here dynamically -->
+                </ul>
+                <p>Total: <span class="cart-total">$0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // JavaScript code to handle cart functionality
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartList = document.querySelector('.shopping-cart');
+        const cartTotal = document.querySelector('.cart-total');
+
+        let cart = [];
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        function addToCart(event) {
+            const productName = event.target.getAttribute('data-name');
+            const productPrice = parseFloat(event.target.getAttribute('data-price'));
+
+            const cartItem = {
+                name: productName,
+                price: productPrice
+            };
+
+            cart.push(cartItem);
+
+            updateCart();
+        }
+
+        function updateCart() {
+            cartList.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                const cartItemElement = document.createElement('li');
+                cartItemElement.classList.add('list-group-item');
+                cartItemElement.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartList.appendChild(cartItemElement);
+
+                total += item.price;
+            });
+
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+   body {
+            background: rgba(183, 180, 180, 0.943) url('bus1.jpg') center center fixed;
+            background-size: cover;
+            background-blend-mode: color-burn;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .container {
+      color: rgb(242, 250, 4); 
+    }
+    *
+{
+font-family: arial;
+font-size: 20px;
+color: rgb(252, 244, 5);
+
+}
+h2.redtext
+{
+font-family: arial;
+font-style: inherit;
+font-size: 30px;
+color:red;
+
+}
+</style>
+<body>
+
+  <div class="container mt-5">
+    <h2 style="background-color: rgb(179, 113, 27)"class="text-center"> SPICE-REGISTRATION FORM</h2>
+    <form action="http://localhost:8000/sign_up" method="post">
+      <div class="form-group">
+        <label for="user">Username</label>
+        <input type="text" class="form-control" id="user" placeholder="Enter username" required name="user">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required name="email" >
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" required name="password">
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">MOBIL NO</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required name="confirmPassword"> 
+      </div>
+      <div class="form-group">
+        <label for="project">Type of GAME:</label>
+        <select class="form-control" id="project" name="project">
+            <option value="SELECT">SELECT</option>
+          <option value="Software">CAR</option>
+          <option value="Hardware">BIKE</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">EVENT Name</label>
+        <input type="name" class="form-control" id="name" placeholder="Enter Teamname" required name="name">
+      </div>
+      EVENT Name:
+      <div class="form-group">
+        <input type="radio" id="hard" name="TeamMembers" value="hard" >
+        <label for="html">OFF Road</label><br>
+        <input type="radio" id="soft" name="TeamMembers" value="soft">
+        <label for="css">RACING</label><br>
+        <input type="radio" id="soft" name="TeamMembers" value="soft">
+        <label for="css">LOADING</label><br>
+    </div>
+    Address:
+    <div class="form-group">
+      <textarea id="address" name="address" rows="4" cols="50">Enter your College Address</textarea>
+    </div>
+    
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>

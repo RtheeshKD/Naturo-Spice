@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spices</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+       <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">SPICES</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="style - Copy.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="product.html">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="video.html">video</a>
+                  </li>
+              </ul>
+              <button class="btn p-2 my-lg-0 my-2">Sign In</button>
+        </div>
+      </nav>
+
+
+      <div class="container mt-5">
+        <h2 style="background-color: rgb(179, 113, 27)"class="text-center"> SPICE-FORM</h2>
+        <form action="http://localhost:8000/sign_up" method="post">
+          <div class="form-group">
+            <label for="user">Username</label>
+            <input type="word" class="form-control" id="user" placeholder="Enter username" required name="user">
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" required name="email" >
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" required name="password">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">MOBILE NO</label>
+            <input type="number" class="form-control" id="number" placeholder="MOBILE NUMBER" required name="MOBILE NUMBER-"> 
+          </div>
+          <div class="form-group">
+            <label for="project">Type of Spice:</label>
+            <select class="form-control" id="Quality" name="Quality">
+                <option value="SELECT">SELECT</option>
+              <option value="Software">Low</option>
+              <option value="Hardware">High</option>
+            </select>
+          </div>
+          
+        Address:
+        <div class="form-group">
+          <textarea id="address" name="address" rows="4" cols="50">Enter your Address</textarea>
+        </div>
+        
+          <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+      </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <marquee>
+      <summary>100% ****Pure Organic Spices****100%</summary>
+    </marquee>
+</body>
+</html>
